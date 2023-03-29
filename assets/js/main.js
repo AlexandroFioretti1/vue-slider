@@ -45,14 +45,12 @@ createApp({
       this.imgActive--;
       if (this.imgActive < 0) {
         this.imgActive = this.images.imagePath.length - 1;
-        console.log(next);
       }
     },
     next() {
       this.imgActive++;
       if (this.imgActive === this.images.imagePath.length) {
         this.imgActive = 0;
-        console.log(prev);
       }
     },
     click(index) {
@@ -60,7 +58,7 @@ createApp({
     },
   },
   mounted() {
-    const autoplay = setInterval(() => {
+    const autoPlay = setInterval(() => {
       this.next();
     }, 3000);
   },

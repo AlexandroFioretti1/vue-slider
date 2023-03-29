@@ -32,13 +32,10 @@ h2 {
     transform: translate(0, -50%);
 }
 
-
-
 .col-9 img:not(.active),
 .col-9 h2:not(.active),
 .col-9 p:not(.active) {
     display: none;
-
 }
 
 .text_wrapper {
@@ -53,7 +50,6 @@ h2 {
 .col-3 img {
     object-fit: cover;
     height: 90px;
-
 }
 
 /* #End Region Carousel card*/
