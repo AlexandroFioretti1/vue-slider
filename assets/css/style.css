@@ -10,7 +10,6 @@
 /* Region Debug */
 /* #End Region Debug */
 
-
 /* Region color for style */
 
 p {
@@ -24,10 +23,28 @@ h2 {
 /* #End Region color for style */
 /* Region container full img */
 .col-9 img {
-    object-fit: fill;
     max-height: 450px;
     width: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+
+
+.col-9 img:not(.active),
+.col-9 h2:not(.active),
+.col-9 p:not(.active) {
+    display: none;
+
+}
+
+.text_wrapper {
+    bottom: 2%;
+    right: 2%;
+    text-align: right;
 }
 
 /* #End Region container full img */
@@ -36,6 +53,7 @@ h2 {
 .col-3 img {
     object-fit: cover;
     height: 90px;
+
 }
 
 /* #End Region Carousel card*/
@@ -49,6 +67,7 @@ h2 {
     position: absolute;
     top: 0;
     right: 50%;
+    transform: translate(50%, 0);
 }
 
 .next_arrow {
@@ -59,7 +78,8 @@ h2 {
     color: white;
     position: absolute;
     right: 50%;
-    bottom: 0;
+    bottom: 0%;
+    transform: translate(50%, 0);
 }
 
 /* #End Region Arrow for choise img*/

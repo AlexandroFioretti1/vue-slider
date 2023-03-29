@@ -27,60 +27,63 @@
     <!-- app_header  -->
     <header class="app_header ">
     </header>
+
     <!-- #End app_header  -->
+    <main class="app_main">
 
-    <!-- div app for VueJs -->
-    <div id="app">
-        <!-- container -->
-        <div class="container">
-            <!-- card -->
-            <div class="card border-0 my-5 ">
-                <!-- row -->
-                <div class="row">
-                    <!-- start col whit primary img -->
-                    <div class="col-9 px-0">
-                        <img class="img-fluid" src="./assets/img/01.webp" alt="">
-                    </div>
-                    <!-- #End col whit primary img -->
+        <!-- div app for VueJs -->
+        <div id="app">
 
-                    <!-- start col whit thumb and button for choise img -->
-                    <div class="col-3 d-flex flex-column position-relative px-0">
-                        <img class="img-fluid" src="./assets/img/01.webp" alt="">
-                        <img class="img-fluid" src="./assets/img/02.webp" alt="">
-                        <img class="img-fluid" src="./assets/img/03.webp" alt="">
-                        <img class="img-fluid" src="./assets/img/04.webp" alt="">
-                        <img class="img-fluid" src="./assets/img/05.webp" alt="">
-                        <nav class="d-flex justify-content-between">
-                            <button class="prev_arrow btn btn-primary  ">
-                                <i class="fa fa-arrow-up" aria-hidden="true"></i>
-                            </button>
-                            <button class="next_arrow btn-primary btn ">
-                                <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                            </button>
-                        </nav>
+            <!-- container -->
+            <div class="container">
+
+                <!-- card -->
+                <div class="card border-0 my-5 ">
+
+                    <!-- row -->
+                    <div class="row">
+
+                        <!-- start col whit primary img -->
+                        <div class="col-9 px-0 position-relative">
+                            <img class="img-fluid" :class="index === imgActive ? `active` : ``" :src="image" alt=""
+                                v-for="(image, index) in images.imagePath">
+                            <div class="position-absolute text_wrapper">
+                                <h2 :class="index === imgActive ? 'active' : ''" v-for="(title, index) in images.title">
+                                    {{title}} </h2>
+                                <p :class="index === imgActive ? 'active' : ''"
+                                    v-for="(description, index) in images.description">{{description}}</p>
+                            </div>
+                        </div>
+                        <!-- #End col whit primary img -->
+
                         <!-- start col whit thumb and button for choise img -->
+                        <div class="col-3 d-flex flex-column position-relative px-0">
+                            <img @click="click(index)" class="img-fluid" :src="image" alt=""
+                                v-for="(image, index) in images.imagePath">
+                            <nav class="d-flex justify-content-between">
+                                <button @click="prev" class="prev_arrow btn btn-primary  ">
+                                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                                </button>
+                                <button @click="next" class="next_arrow btn-primary btn ">
+                                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                </button>
+                            </nav>
 
+                            <!-- #End start col whit thumb and button for choise img -->
+                        </div>
+
+                        <!--#End row -->
                     </div>
 
-                    <!--#End row -->
-                </div>
-                <!-- Card info for title and description -->
-                <div class="card_info">
-                    <h2>titolo gioco </h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quod eligendi ipsum ratione
-                        voluptas expedita.
-                    </p>
+                    <!--#End card -->
                 </div>
 
-                <!--#End card -->
+                <!--#End container -->
             </div>
 
-            <!--#End container -->
+            <!--#End div app for VueJs -->
         </div>
-
-        <!--#End div app for VueJs -->
-    </div>
-
+    </main>
     <!-- app_footer  -->
     <footer class="app_footer ">
     </footer>
