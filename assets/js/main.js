@@ -9,7 +9,6 @@ Bonus:
 3- quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce.
 */
 
-
 const { createApp } = Vue;
 
 createApp({
@@ -59,5 +58,10 @@ createApp({
     click(index) {
       this.imgActive = index;
     },
+  },
+  mounted() {
+    const autoplay = setInterval(() => {
+      this.next();
+    }, 3000);
   },
 }).mount("#app");
