@@ -1,5 +1,65 @@
+/* Region reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* #End Region reset CSS */
+
+/* Region Debug */
+/* #End Region Debug */
+
+
+/* Region color for style */
+
+p {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+/* #End Region color for style */
+/* Region container full img */
+.col-9 img {
+    object-fit: fill;
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* #End Region container full img */
+/* Region Carousel card*/
+
+.col-3 img {
+    object-fit: cover;
+    height: 90px;
+}
+
+/* #End Region Carousel card*/
+/* Region Arrow for choise img*/
+.prev_arrow {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 50%;
+}
+
+.next_arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+}
+
+/* #End Region Arrow for choise img*/
